@@ -1,0 +1,27 @@
+.header__jumbotron--box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    .heading-primary{
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        backface-visibility: hidden;
+        &--main{
+            display: block;
+            font-size:6rem;
+            letter-spacing: 2.5rem;
+            font-weight: 400;
+            animation: headingTop .6s ease-in;
+        }
+        &--sub{
+            display: block;
+            font-size: 2.5rem;
+            letter-spacing: 1rem;
+            font-weight: 400;
+            animation: headingBottom .6s ease-in;
+            margin-bottom: 6rem;
+        }
+    }
+}

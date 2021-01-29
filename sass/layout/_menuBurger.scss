@@ -1,0 +1,76 @@
+@include respond(phone) {
+    .menu-one {
+        background-color: transparent;
+        width: 2.7rem;
+        height: 2.7rem;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 1.2rem;
+        left: 1rem;
+        cursor: pointer;
+        z-index: 2000;
+    }
+    
+    .line-one {
+        background-color: #ff7730;
+        width: 80%;
+        height: .3rem;
+        position: relative;
+        transition: all .3s;
+
+    }
+    
+    .line-one::before {
+        content: "";
+        background-color: #ff7730;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: .9rem;
+        transition: all .3s;
+        
+    }
+    
+    .line-one::after {
+        content: "";
+        background-color: #ff7730;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -.9rem;
+        transition: all .3s;
+    }
+    
+    .line-two {
+        background-color: transparent;
+        width: 80%;
+        height: .3rem;
+        position: relative;
+        transition: all .3s;
+    }
+    
+    .line-two::before {
+        content: "";
+        background-color: #ff7730;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0rem;
+        transform: rotate(-45deg);
+        transition: all .3s;
+    }
+    
+    .line-two::after {
+        content: "";
+        background-color: #ff7730;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0rem;
+        transform: rotate(45deg);
+        transition: all .3s;
+    }
+
+}
+

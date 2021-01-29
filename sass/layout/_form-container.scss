@@ -1,0 +1,158 @@
+.container-form{
+    background-image:linear-gradient(105deg,
+    rgba($color-primary,.8)0%,
+    rgba($color-primary-light,.7)50%,
+    transparent 50%),  url("../../public/img/form.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    min-height: 50vh;
+    box-shadow: 0 2rem 2.5rem rgba($color-black,.5);
+
+    @include respond (tab-port) {
+        background-image:linear-gradient(105deg,
+        rgba($color-primary,.8)0%,
+        rgba($color-primary-light,.7)75%,
+        transparent 75%),  url("../../public/img/form.jpeg");
+        width: 100%;
+        background-position: center;
+    }
+
+    @include respond (phone) {
+        background-image:linear-gradient(105deg,
+        rgba($color-primary,.8)0%,
+        rgba($color-primary-light,.7)100%,
+        transparent 100%),  url("../../public/img/form.jpeg");
+        width: 100%;
+        background-position: center;
+    }
+    
+}
+
+
+
+.form{
+    margin-top: $margin-bottom-big;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $color-gray-dark;
+
+
+    @include respond (tab-land) {
+           min-height: 55rem;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+    }
+
+    @include respond (tab-port) {
+        width: 60%;
+    }
+    
+    @include respond (phone) {
+        min-height: 50rem;
+        width: 80%;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 2rem;
+    }
+    
+
+    &__group{
+        width: 100%;
+        
+    }
+
+    &::-webkit-input-placeholder{
+        color: $color-gray-dark;
+    }
+
+   
+    &__group:not(:last-child){
+        margin-bottom: 0rem;
+    }
+    &__input{
+        font-family:inherit; 
+        margin-left: 2.5rem;
+        font-size: 1.5rem;
+        width:80%;
+        padding: .1rem 0rem 2.5rem 0rem;
+        text-align:start;
+        display: block;
+        background-color: rgba($color-white,.7);
+        color: inherit;
+        border-bottom: 3px solid transparent;
+        border-radius: 2px;
+        box-shadow: 0 1.2rem 2rem rgba($color-black,.50);
+
+        @include respond (tab-port) {
+            width: 80%;
+        }
+      
+        
+
+        &:focus{
+            border-bottom: 3px solid $color-green-dark;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white,.15);
+            outline: none;
+            &:invalid{
+            border-bottom: 3px solid orangered;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white,.15);
+            }
+        }
+        
+
+        &--about{
+            font-family:inherit; 
+            width: 100%;
+            padding: .1rem 0rem 8rem 0rem;
+            display: block;
+            margin-left: 2.5rem;
+            background-color: rgba($color-white,.7);
+            border-bottom: 2px solid transparent;
+            border-radius: 2px;
+            box-shadow: 0 1.2rem 2rem rgba($color-black,.50);
+
+     
+            &:focus{
+                border-bottom: 3px solid $color-green-dark;
+                box-shadow: 0 0.8rem 1.5rem rgba($color-white,.15);
+                outline: none;
+                &:invalid{
+                    border-bottom: 3px solid orangered;
+                    box-shadow: 0 0.8rem 1.5rem rgba($color-white,.15);
+                    }
+            }
+        }
+
+        &--about:placeholder-shown {
+            color: $color-gray-dark;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__input:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__input--about:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__label{
+        margin-left: 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: block;
+        margin-top: .5rem;
+        transition: all .3s;
+    }
+}

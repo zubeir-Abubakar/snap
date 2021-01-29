@@ -1,0 +1,239 @@
+//ONE
+
+.header{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary,
+        $color-primary-light),
+         url("./../../public/img/bg.jpeg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+    
+
+    @include respond (phone) {
+        min-height: 80rem;
+    }
+}
+
+//sticky nav
+.sticky-nav .navbar-container {
+    position: fixed;
+    box-shadow: 0 .8rem 1.2rem rgba(0, 0, 0, .20);
+    right: .1rem;
+    height: 6rem;
+    background-color: $color-blue-dark;
+
+    @include respond(phone) {
+        height: 15rem;
+    }
+   
+}
+
+.sticky-nav .navbar__logo-container {
+    max-width: 50rem;
+    flex: 0 0 55%;
+    opacity: 1;
+    transform: translateX(10rem);
+
+    @include respond (phone) {
+        flex: 0 0 40%;
+        max-width: 200rem;
+        transform: translateX(5rem)
+    }
+}
+
+.active-navbar {
+    @include respond(phone) {
+        opacity: 1!important;
+    }
+}
+//sticky nav
+
+.navbar-container {
+    height: 7rem;
+    width: 100%;
+    background-color: $color-blue-dark;
+    border: 2px solid rgb(119, 119, 119);
+    border-radius: .3rem;
+    position: relative;
+    top: 0;
+    z-index: 2000;
+    transition: all .3s;
+    opacity: .8;
+    
+
+    @include respond(phone) {
+        opacity: 0;
+        height: 16.5rem;
+    }
+}
+
+.navbar {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   
+
+    &__logo-container {
+        opacity: 0;
+        transition: all .3s;
+        flex:  0 0 40%;
+        
+
+        @include respond(tab-port) {
+            flex: 0 0 40%;
+        }
+
+    }
+
+    &__logo {
+        height: 4rem;
+        width: auto;
+        margin-left: 2.5rem;
+        transition: all .3s;
+        overflow: hidden;
+ 
+        @include respond(phone) {
+            height: 8rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        flex: 0 0 50%;
+        
+
+        @include respond (phone) {
+           flex: 0 0 15%;
+           flex-direction: column;
+        }
+       
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link:visited,
+    &__link:link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.8rem;
+
+    }
+}
+
+
+
+//TWO
+
+.section-about{
+    background-color: $color-white-gray;
+    margin-top: -10vh;
+    min-height: 90vh;
+    width: 100%;
+
+    @include respond (tab-land) {
+        margin-top: -10rem;
+        min-height: 80rem;
+    }
+    @include respond (tab-port) {
+        margin-top: -10rem;
+        height: 90rem;
+    }
+    
+
+    
+}
+
+.section-choice{
+    background-image: linear-gradient(to right bottom,$color-secondary,$color-secondary-light),url("../../public/img/bg2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: -11vh;
+    transform:skewY(-4deg);
+    display: flex;
+
+    @include respond (tab-land) {
+        min-height: 90rem;
+        transform: skew(0);
+        margin-top: -5vh;
+    }
+
+    @include respond (tab-port) {
+        min-height: 250rem;
+        transform: skew(0);
+    }
+    @include respond (phone) {
+        min-height: 220rem;
+        transform: skew(0);
+        margin-top: -12rem;
+    }
+    
+    & > *{
+        transform:skewY(4deg);
+        @include respond (tab-land) {
+            transform: skew(0);
+        }
+    }
+    
+}
+
+.section-form{
+    background-color: $color-white-gray;
+    min-height: 90vh;
+    width: 100%;
+    margin-top: -10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'lato';
+    
+    
+    
+    @include respond (tab-land) {
+        min-height: 85rem;
+    }
+  
+ 
+   
+}
+
+.footer{
+    min-height:50vh;
+    width: 100%;
+    background-image: linear-gradient(to right bottom,rgba($color-primary,.9),rgba($color-primary-light,.8));
+    box-shadow: 0 1.2rem 2rem rgba($color-black,.50);
+    border-radius: .3rem;
+
+    @include respond (tab-land) {
+        min-height: 40rem;
+    }
+
+    @include respond(tab-land-higher) {
+        margin-top: 5rem;
+    }
+
+    @include respond (tab-port) {
+        min-height: 30rem;
+        margin-top: 5rem;
+    }
+    @include respond (phone) {
+        margin-top: 0rem;
+    }
+
+  
+   
+}
